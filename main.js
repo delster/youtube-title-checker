@@ -1,23 +1,107 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
   // Grab references to the DOM elements we'll be listening to.
-  const thumbnailInput = document.querySelector('form .thumbnail.field');
-  const lengthInput = document.querySelector('form .length.field');
-  const titleInput = document.querySelector('form .title.field');
-  const channelInput = document.querySelector('form .channel.field');
-  const viewcountInput = document.querySelector('form .viewcount.field');
-  const uploadagoInput = document.querySelector('form .uploadago.field');
-  const upvotepctInput = document.querySelector('form .upvotepct.field');
+  const thumbnailInput = document.querySelector("form .thumbnail.field");
+  const lengthInput = document.querySelector("form .length.field");
+  const titleInput = document.querySelector("form .title.field");
+  const channelInput = document.querySelector("form .channel.field");
+  const viewcountInput = document.querySelector("form .viewcount.field");
+  const uploadagoInput = document.querySelector("form .uploadago.field");
+  const upvotepctInput = document.querySelector("form .upvotepct.field");
 
+  // Create previews based on our form.
+  Desktop(
+    thumbnailInput,
+    channelInput,
+    lengthInput,
+    titleInput,
+    viewcountInput
+  );
+  SuggestedHome(
+    thumbnailInput,
+    lengthInput,
+    titleInput,
+    channelInput,
+    viewcountInput,
+    uploadagoInput,
+    upvotepctInput
+  );
+  SuggestedSidebar(
+    thumbnailInput,
+    lengthInput,
+    titleInput,
+    channelInput,
+    viewcountInput,
+    upvotepctInput
+  );
+});
 
-  // Input onChange Events (when form fields are edited)
-  thumbnailInput.addEventListener("change", e => {});
-  lengthInput.addEventListener("change", e => {});
-  titleInput.addEventListener("change", e => {});
-  channelInput.addEventListener("change", e => {});
-  viewcountInput.addEventListener("change", e => {});
-  uploadagoInput.addEventListener("change", e => {});
-  upvotepctInput.addEventListener("change", e => {});
+const Desktop = (
+  thumbnailInput,
+  channelInput,
+  lengthInput,
+  titleInput,
+  viewcountInput
+) => {
+  const desktopEl = document.querySelector(".desktop-full");
+  const thumbnailOutput = desktopEl.querySelector(".thumbnail");
+  const channelOutput = desktopEl.querySelector(".channel");
+  const lengthOutput = desktopEl.querySelector(".length");
+  const titleOutput = desktopEl.querySelector(".title");
+  const viewcountOutput = desktopEl.querySelector(".viewcount");
 
+  document.querySelector('form').addEventListener("input", e => console.log(e.target))
+  thumbnailInput.addEventListener("input", e => { thumbnailOutput.src = e.target.value; });
+  channelInput.addEventListener("input", e => { channelOutput.textContent = e.target.value; });
+  lengthInput.addEventListener("input", e => { lengthOutput.textContent = e.target.value; });
+  titleInput.addEventListener("input", e => { titleOutput.textContent = e.target.value; });
+  viewcountInput.addEventListener("input", e => { viewcountOutput.textContent = e.target.value; });
+};
+const SuggestedHome = (
+  thumbnailInput,
+  lengthInput,
+  titleInput,
+  channelInput,
+  viewcountInput,
+  uploadagoInput,
+  upvotepctInput
+) => {
+  const shomeEl = document.querySelector(".suggested > .home");
+  const thumbnailOutput = shomeEl.querySelector(".thumbnail");
+  const lengthOutput = shomeEl.querySelector(".length");
+  const titleOutput = shomeEl.querySelector(".title");
+  const channelOutput = shomeEl.querySelector(".channel");
+  const viewcountOutput = shomeEl.querySelector(".viewcount");
+  const uploadagoOutput = shomeEl.querySelector(".uploadago");
+  const upvotepctOutput = shomeEl.querySelector(".upvotepct");
 
+  thumbnailInput.addEventListener("input", e => { thumbnailOutput.src = e.target.value; });
+  lengthInput.addEventListener("input", e => { lengthOutput.textContent = e.target.value; });
+  titleInput.addEventListener("input", e => { titleOutput.textContent = e.target.value; });
+  channelInput.addEventListener("input", e => { channelOutput.textContent = e.target.value; });
+  viewcountInput.addEventListener("input", e => { viewcountOutput.textContent = e.target.value; });
+  uploadagoInput.addEventListener("input", e => { uploadagoOutput.textContent = e.target.value; });
+  upvotepctInput.addEventListener("input", e => { upvotepctOutput.textContent = e.target.value; });
+};
+const SuggestedSidebar = (
+  thumbnailInput,
+  lengthInput,
+  titleInput,
+  channelInput,
+  viewcountInput,
+  upvotepctInput
+) => {
+  const ssidebarEl = document.querySelector(".suggested > .sidebar");
+  const thumbnailOutput = ssidebarEl.querySelector(".thumbnail");
+  const lengthOutput = ssidebarEl.querySelector(".length");
+  const titleOutput = ssidebarEl.querySelector(".title");
+  const channelOutput = ssidebarEl.querySelector(".channel");
+  const viewcountOutput = ssidebarEl.querySelector(".viewcount");
+  const upvotepctOutput = ssidebarEl.querySelector(".upvotepct");
 
-})
+  thumbnailInput.addEventListener("input", e => { thumbnailOutput.src = e.target.value; })
+  lengthInput.addEventListener("input", e => { lengthOutput.textContent = e.target.value; })
+  titleInput.addEventListener("input", e => { titleOutput.textContent = e.target.value; })
+  channelInput.addEventListener("input", e => { channelOutput.textContent = e.target.value; })
+  viewcountInput.addEventListener("input", e => { viewcountOutput.textContent = e.target.value; })
+  upvotepctInput.addEventListener("input", e => { upvotepctOutput.textContent = e.target.value; })
+};

@@ -9,6 +9,11 @@ body {
   background-color: #f0f0f0;
 }
 
+img {
+  height: auto;
+  width: 100%;
+}
+
 .container {
   width: 95%;
   max-width: 1200px;
@@ -24,6 +29,7 @@ body {
 
 .desktop-full, .suggested {
   flex: 1 1 50%;
+  padding: 1rem;
 }
 
 
@@ -36,11 +42,18 @@ form {
   box-shadow: 0px 0px 17px -2px rgba(0, 0, 0, 0.06);
 }
 
+.form-title {
+  font-size: .8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
 input, textarea {
   color: #666;
   font-size: 20px;
   margin: .5rem 0;
   padding: 1rem 2rem;
   width: 100%;
-  border: 1px solid #444;
+  border: 2px solid #eee;
+  border-radius: .5rem;
 }
