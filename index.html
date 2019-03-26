@@ -1,0 +1,88 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>YouTube Title Checker</title>
+  <link rel="stylesheet" type="text/css" href="./style.css" />
+</head>
+<body>
+  <div class="container previews">
+    <div class="desktop-full">
+      <h2>Desktop Full</h2>
+      <div class="player">
+        <!-- "Thumbnail" in this case is the video player. -->
+        <img class="thumbnail" src="" alt="" />
+        <!--  The channel name appears in the top left of the player. -->
+        <p class="channel"></p>
+        <span class="length"></span>
+      </div> <!-- .player -->
+        <!-- This is the video meta section -->
+      <div class="details">
+        <p class="title"></p>
+        <span class="viewcount"></span>
+      </div> <!-- .details -->
+    </div> <!-- .desktop-full -->
+    <div class="suggested">
+      <div class="home">
+        <h2>Suggested: Home</h2>
+        <!-- This is the wrapper for the thumbnail -->
+        <div class="featuredimage">
+          <img class="thumbnail" src="" alt="" />
+          <span class="length"></span>
+        </div> <!-- .featuredimage -->
+        <p class="title"></p>
+        <p class="channel"></p>
+        <!-- This is the video meta section -->
+        <div class="details">
+          <span class="viewcount"></span>
+          <span class="uploadago"></span>
+          <span class="upvotepct"></span>
+        </div> <!-- .detauls -->
+      </div> <!-- .home -->
+      <div class="sidebar">
+        <h2>Suggested: Sidebar</h2>
+        <!-- This is the wrapper for the thumbnail -->
+        <div class="featuredimage">
+          <img class="thumbnail" src="" alt="" />
+          <span class="length"></span>
+        </div> <!-- .featuredimage -->
+        <!-- This is the video meta section -->
+        <div class="details">
+          <p class="title"></p>
+          <p class="channel"></p>
+          <span class="viewcount"></span>
+          <span class="upvotepct"></span>
+        </div> <!-- .details -->
+      </div> <!-- .sidebar -->
+    </div> <!-- .suggested -->
+  </div> <!-- .container -->
+  <div class="container userinput">
+    <form>
+      <p class="form-title">Enter Your Video Info</p>
+      <div class="field thumbnail">
+        <input type="text" name="" value="Thumbnail (will be a file upload)" />
+      </div> <!-- Thumbnail -->
+      <div class="field length">
+        <input type="text" name="" value="0:00" />
+      </div> <!-- Video Length -->
+      <div class="field title">
+        <input type="text" name="" value="Video Title" />
+      </div> <!-- Video Title -->
+      <div class="field channel">
+        <input type="text" name="" value="Channel Name" />
+      </div> <!-- Channel Name -->
+      <div class="field viewcount">
+        <input type="text" name="" value="651k views" />
+      </div> <!-- View Count -->
+      <div class="field uploadago">
+        <input type="text" name="" value="16 hours ago" />
+      </div> <!-- Upload Ago -->
+      <div class="field upvotepct">
+        <input type="text" name="" value="99%" />
+      </div> <!-- Upvote % -->
+    </form> <!-- User Input Form -->
+  </div> <!-- .container -->
+  <script src='./main.js'></script>
+</body>
+</html>
