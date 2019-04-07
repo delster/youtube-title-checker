@@ -53,13 +53,13 @@ const Desktop = (
   const titleOutput = desktopEl.querySelector(".title");
   const viewcountOutput = desktopEl.querySelector(".viewcount");
 
-  document.querySelector('form').addEventListener("input", e => console.log(e.target))
   thumbnailInput.addEventListener("input", e => { thumbnailOutput.src = e.target.value; });
   channelInput.addEventListener("input", e => { channelOutput.textContent = e.target.value; });
   lengthInput.addEventListener("input", e => { lengthOutput.textContent = e.target.value; });
   titleInput.addEventListener("input", e => { titleOutput.textContent = e.target.value; });
   viewcountInput.addEventListener("input", e => { viewcountOutput.textContent = e.target.value; });
 };
+
 const SuggestedHome = (
   thumbnailInput,
   lengthInput,
@@ -86,6 +86,7 @@ const SuggestedHome = (
   uploadagoInput.addEventListener("input", e => { uploadagoOutput.textContent = e.target.value; });
   upvotepctInput.addEventListener("input", e => { upvotepctOutput.textContent = e.target.value; });
 };
+
 const SuggestedSidebar = (
   thumbnailInput,
   lengthInput,

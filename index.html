@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>YouTube Title Checker</title>
   <!-- GFont: Roboto -->
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
   <!-- Custom CSS -->
   <link rel="stylesheet" type="text/css" href="./style.css" />
 </head>
@@ -17,13 +17,13 @@
         <!-- "Thumbnail" in this case is the video player. -->
         <img class="thumbnail" src="https://via.placeholder.com/640x480?text=Video+Placeholder" alt="" />
         <!--  The channel name appears in the top left of the player. -->
-        <p class="channel"></p>
-        <span class="length"></span>
+        <p class="channel">Channel Name</p>
+        <span class="length">0:00</span>
       </div> <!-- .player -->
         <!-- This is the video meta section -->
       <div class="details">
-        <p class="title"></p>
-        <span class="viewcount"></span>
+        <p class="title">Video Title</p>
+        <span class="viewcount">651k views</span>
       </div> <!-- .details -->
     </div> <!-- .desktop-full -->
     <div class="suggested">
@@ -32,15 +32,15 @@
         <!-- This is the wrapper for the thumbnail -->
         <div class="featuredimage">
           <img class="thumbnail" src="https://via.placeholder.com/640x480?text=Video+Placeholder" alt="" />
-          <span class="length"></span>
+          <span class="length">0:00</span>
         </div> <!-- .featuredimage -->
-        <p class="title"></p>
-        <p class="channel"></p>
+        <p class="title">Video Title</p>
         <!-- This is the video meta section -->
         <div class="details">
-          <span class="viewcount"></span>
-          <span class="uploadago"></span>
-          <span class="upvotepct"></span>
+          <p class="channel">Channel Name</p>
+          <span class="viewcount">651k views</span>
+          <span class="uploadago">16 hours ago</span>
+          <span class="upvotepct">99%</span>
         </div> <!-- .detauls -->
       </div> <!-- .home -->
       <div class="sidebar">
@@ -48,51 +48,54 @@
         <!-- This is the wrapper for the thumbnail -->
         <div class="featuredimage">
           <img class="thumbnail" src="https://via.placeholder.com/640x480?text=Video+Placeholder" alt="" />
-          <span class="length"></span>
+          <span class="length">0:00</span>
         </div> <!-- .featuredimage -->
         <!-- This is the video meta section -->
         <div class="details">
-          <p class="title"></p>
-          <p class="channel"></p>
-          <span class="viewcount"></span>
-          <span class="upvotepct"></span>
+          <p class="title">Video Title</p>
+          <p class="channel">Channel Name</p>
+          <span class="viewcount">651k views</span>
+          <span class="upvotepct">99%</span>
         </div> <!-- .details -->
       </div> <!-- .sidebar -->
     </div> <!-- .suggested -->
-  </div> <!-- .container -->
+  </div> <!-- .previews -->
   <div class="container userinput">
     <p class="form-title">Enter Your Video Info</p>
     <form>
       <div class="field thumbnail">
-        <label for="">Thumbnail Url</label>
+        <label for="thumbnail">Thumbnail Url</label>
         <input type="text" name="thumbnail" value="https://via.placeholder.com/640x480?text=Video+Placeholder" />
       </div> <!-- Thumbnail -->
       <div class="field length">
-        <label for="">Video Length</label>
+        <label for="length">Video Length</label>
         <input type="text" name="length" value="0:00" />
       </div> <!-- Video Length -->
       <div class="field title">
-        <label for="">Video Title</label>
+        <label for="title">Video Title</label>
         <input type="text" name="title" value="Video Title" />
       </div> <!-- Video Title -->
       <div class="field channel">
-        <label for="">Channel Name</label>
+        <label for="channel">Channel Name</label>
         <input type="text" name="channel" value="Channel Name" />
       </div> <!-- Channel Name -->
       <div class="field viewcount">
-        <label for="">View Count</label>
+        <label for="viewcount">View Count</label>
         <input type="text" name="viewcount" value="651k views" />
       </div> <!-- View Count -->
       <div class="field uploadago">
-        <label for="">"Uploaded Ago" Text</label>
+        <label for="uploadago">"Uploaded Ago" Text</label>
         <input type="text" name="uploadago" value="16 hours ago" />
       </div> <!-- Upload Ago -->
       <div class="field upvotepct">
-        <label for="">Upvote %</label>
+        <label for="upvotepct">Upvote %</label>
         <input type="text" name="upvotepct" value="99%" />
       </div> <!-- Upvote % -->
     </form> <!-- User Input Form -->
-  </div> <!-- .container -->
+  </div> <!-- .userinput -->
+  <!-- Clamp.js to truncate text -->
+  <script src='./clamp.js'></script>
+  <!-- Custom JS -->
   <script src='./main.js'></script>
 </body>
 </html>
