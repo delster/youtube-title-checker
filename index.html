@@ -4,6 +4,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>YouTube Title Checker</title>
+  <!-- GFont: Roboto -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <!-- Custom CSS -->
   <link rel="stylesheet" type="text/css" href="./style.css" />
 </head>
 <body>
@@ -12,7 +15,7 @@
       <h2>Desktop Full</h2>
       <div class="player">
         <!-- "Thumbnail" in this case is the video player. -->
-        <img class="thumbnail" src="" alt="" />
+        <img class="thumbnail" src="https://via.placeholder.com/640x480?text=Video+Placeholder" alt="" />
         <!--  The channel name appears in the top left of the player. -->
         <p class="channel"></p>
         <span class="length"></span>
@@ -28,7 +31,7 @@
         <h2>Suggested: Home</h2>
         <!-- This is the wrapper for the thumbnail -->
         <div class="featuredimage">
-          <img class="thumbnail" src="" alt="" />
+          <img class="thumbnail" src="https://via.placeholder.com/640x480?text=Video+Placeholder" alt="" />
           <span class="length"></span>
         </div> <!-- .featuredimage -->
         <p class="title"></p>
@@ -44,7 +47,7 @@
         <h2>Suggested: Sidebar</h2>
         <!-- This is the wrapper for the thumbnail -->
         <div class="featuredimage">
-          <img class="thumbnail" src="" alt="" />
+          <img class="thumbnail" src="https://via.placeholder.com/640x480?text=Video+Placeholder" alt="" />
           <span class="length"></span>
         </div> <!-- .featuredimage -->
         <!-- This is the video meta section -->
@@ -58,28 +61,35 @@
     </div> <!-- .suggested -->
   </div> <!-- .container -->
   <div class="container userinput">
+    <p class="form-title">Enter Your Video Info</p>
     <form>
-      <p class="form-title">Enter Your Video Info</p>
       <div class="field thumbnail">
-        <input type="text" name="" value="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" />
+        <label for="">Thumbnail Url</label>
+        <input type="text" name="thumbnail" value="https://via.placeholder.com/640x480?text=Video+Placeholder" />
       </div> <!-- Thumbnail -->
       <div class="field length">
-        <input type="text" name="" value="0:00" />
+        <label for="">Video Length</label>
+        <input type="text" name="length" value="0:00" />
       </div> <!-- Video Length -->
       <div class="field title">
-        <input type="text" name="" value="Video Title" />
+        <label for="">Video Title</label>
+        <input type="text" name="title" value="Video Title" />
       </div> <!-- Video Title -->
       <div class="field channel">
-        <input type="text" name="" value="Channel Name" />
+        <label for="">Channel Name</label>
+        <input type="text" name="channel" value="Channel Name" />
       </div> <!-- Channel Name -->
       <div class="field viewcount">
-        <input type="text" name="" value="651k views" />
+        <label for="">View Count</label>
+        <input type="text" name="viewcount" value="651k views" />
       </div> <!-- View Count -->
       <div class="field uploadago">
-        <input type="text" name="" value="16 hours ago" />
+        <label for="">"Uploaded Ago" Text</label>
+        <input type="text" name="uploadago" value="16 hours ago" />
       </div> <!-- Upload Ago -->
       <div class="field upvotepct">
-        <input type="text" name="" value="99%" />
+        <label for="">Upvote %</label>
+        <input type="text" name="upvotepct" value="99%" />
       </div> <!-- Upvote % -->
     </form> <!-- User Input Form -->
   </div> <!-- .container -->

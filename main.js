@@ -1,12 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
   // Grab references to the DOM elements we'll be listening to.
-  const thumbnailInput = document.querySelector("form .thumbnail.field");
-  const lengthInput = document.querySelector("form .length.field");
-  const titleInput = document.querySelector("form .title.field");
-  const channelInput = document.querySelector("form .channel.field");
-  const viewcountInput = document.querySelector("form .viewcount.field");
-  const uploadagoInput = document.querySelector("form .uploadago.field");
-  const upvotepctInput = document.querySelector("form .upvotepct.field");
+  const userInputForm = document.querySelector(".userinput form")
+  const thumbnailInput = userInputForm.querySelector(".userinput .thumbnail");
+  const lengthInput = userInputForm.querySelector(".userinput .length");
+  const titleInput = userInputForm.querySelector(".userinput .title");
+  const channelInput = userInputForm.querySelector(".userinput .channel");
+  const viewcountInput = userInputForm.querySelector(".userinput .viewcount");
+  const uploadagoInput = userInputForm.querySelector(".userinput .uploadago");
+  const upvotepctInput = userInputForm.querySelector(".userinput .upvotepct");
 
   // Create previews based on our form.
   Desktop(
@@ -33,6 +34,9 @@ document.addEventListener("DOMContentLoaded", () => {
     viewcountInput,
     upvotepctInput
   );
+
+  // Prevent Form Submission (just in case..)
+  userInputForm.addEventListener( "submit", e => e.preventDefault() )
 });
 
 const Desktop = (
