@@ -187,8 +187,7 @@ textarea:focus {
   margin: 0;
   padding: 0;
 }
-.suggested .viewcount::after,
-.suggested .uploadago::after {
+.suggested .home .viewcount::after {
   content: " • ";
 }
 #yt_preview_advancedtoggle {
