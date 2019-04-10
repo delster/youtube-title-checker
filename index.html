@@ -1,7 +1,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" id="yt_preview_viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>YouTube Title Checker</title>
   <!-- GFont: Roboto -->
@@ -40,7 +40,6 @@
           <p class="channel">Channel Name</p>
           <span class="viewcount">651k views</span>
           <span class="uploadago">16 hours ago</span>
-          <span class="upvotepct">99%</span>
         </div> <!-- .detauls -->
       </div> <!-- .home -->
       <div class="sidebar">
@@ -55,7 +54,6 @@
           <p class="title">Video Title</p>
           <p class="channel">Channel Name</p>
           <span class="viewcount">651k views</span>
-          <span class="upvotepct">99%</span>
         </div> <!-- .details -->
       </div> <!-- .sidebar -->
     </div> <!-- .suggested -->
@@ -63,34 +61,33 @@
   <div class="container userinput">
     <p class="form-title">Enter Your Video Info</p>
     <form>
-      <div class="field thumbnail">
-        <label for="thumbnail">Thumbnail Url</label>
-        <input type="text" name="thumbnail" value="https://via.placeholder.com/640x480?text=Video+Placeholder" />
-      </div> <!-- Thumbnail -->
-      <div class="field length">
-        <label for="length">Video Length</label>
-        <input type="text" name="length" value="0:00" />
-      </div> <!-- Video Length -->
       <div class="field title">
-        <label for="title">Video Title</label>
-        <input type="text" name="title" value="Video Title" />
+        <label for="yt_preview_title">Video Title</label>
+        <input type="text" name="title" id="yt_preview_title" value="Video Title" />
+        <div class="ch-count"><span class="ch">0</span>/100</div>
       </div> <!-- Video Title -->
+      <div class="field thumbnail">
+        <label for="yt_preview_thumbnail">Thumbnail</label>
+        <input type="file" name="thumbnail" id="yt_preview_thumbnail" accept="image/*">
+      </div> <!-- Thumbnail -->
+      <input type="checkbox" name="advancedtoggle" id="yt_preview_advancedtoggle">
+      <label for="yt_preview_advancedtoggle">Advanced Options</label>
+      <div class="field length">
+        <label for="yt_preview_length">Video Length</label>
+        <input type="text" name="length" id="yt_preview_length" value="0:00" />
+      </div> <!-- Video Length -->
       <div class="field channel">
-        <label for="channel">Channel Name</label>
-        <input type="text" name="channel" value="Channel Name" />
+        <label for="yt_preview_channel">Channel Name</label>
+        <input type="text" name="channel" id="yt_preview_channel" value="Channel Name" />
       </div> <!-- Channel Name -->
       <div class="field viewcount">
-        <label for="viewcount">View Count</label>
-        <input type="text" name="viewcount" value="651k views" />
+        <label for="yt_preview_viewcount">View Count</label>
+        <input type="text" name="viewcount" id="yt_preview_viewcount" value="651k views" />
       </div> <!-- View Count -->
       <div class="field uploadago">
-        <label for="uploadago">"Uploaded Ago" Text</label>
-        <input type="text" name="uploadago" value="16 hours ago" />
+        <label for="yt_preview_uploadago">"Uploaded Ago" Text</label>
+        <input type="text" name="uploadago" id="yt_preview_uploadago" value="16 hours ago" />
       </div> <!-- Upload Ago -->
-      <div class="field upvotepct">
-        <label for="upvotepct">Upvote %</label>
-        <input type="text" name="upvotepct" value="99%" />
-      </div> <!-- Upvote % -->
     </form> <!-- User Input Form -->
   </div> <!-- .userinput -->
   <!-- Clamp.js to truncate text -->
